@@ -1,0 +1,24 @@
+body {
+    background-color: #1D1D1D;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+
+#weatherCardPlaceholder {
+    max-width: 750px;
+    margin: 80px auto 0;
+    padding: 30px;
+    border-radius: 25px;
+    background-color: #FFD9D8;
+}
+
+#weatherCardPlaceholder .temperature-description {
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+#weatherCardPlaceholder .temperature-celcius {
+    font-size: 60px;
+    text-align: right;
+}
