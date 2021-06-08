@@ -8,8 +8,10 @@ const SELECTORS = {
     weatherCard: document.getElementById("weatherCardPlaceholder")
 }
 
+
 document.addEventListener("DOMContentLoaded", function() {
     const inputVal = "Rotterdam";
+    let customWeatherText = "absolute shit";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
 
     fetch(url)
@@ -20,8 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Create weather item
             const weatherItem = `
-                <h1 class="temperature-description">${weather[0].description}</h1>
-                <p class="temperature-celcius">${main.temp}&deg;C</p>
+                <h1 class="temperature-description">The weather in <span class="city">Rotterdam</span> is ${customWeatherText}.</h1>
+                <p>...and by ${customWeatherText} I mean there's ${weather[0].description}</p>
+                <p class="temperature-celcius">${Math.round(main.temp)}&deg;C</p>
             `;
 
             // Add item to container
