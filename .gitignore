@@ -350,4 +350,4 @@ MigrationBackup/
 .ionide/
 
 # Configuration
-Config.js
+config.js
